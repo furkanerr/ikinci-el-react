@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/tzk0mwo.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .Container {
   display: flex;
@@ -9,7 +9,7 @@
   background-color: #f2f2f2;
   
 }
-.RegisterFormContainer {
+.FormContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,26 +47,22 @@
   gap: 10px;
   margin-bottom: 30px;
 }
-.UyeOlHeaderText {
-  top: 123px;
-  left: 139px;
-  width: 99px;
+.GirisYapHeaderText {
+  width: 130px;
   height: 43px;
-
+  
+ 
   text-align: center;
   font: normal normal bold 32px/43px Nunito;
-  
   letter-spacing: 0px;
   color: #525252;
   opacity: 1;
 }
 .TextUnderHeader {
-  /* Layout Properties */
-  top: 176px;
-  left: 69px;
+ 
   width: 242px;
   height: 20px;
-  /* UI Properties */
+  
 
   text-align: center;
   font: normal normal normal 15px/20px Nunito;
@@ -95,7 +91,29 @@
 }
 .Password{
     margin-top: 15px;
+    position: relative;
     
+}
+.EyeIcon{
+  position: absolute;
+  right: 17px;
+  top: 40px;
+  width: 19px;
+  height: 14px;
+  opacity: 1;
+}
+.PasswordRemember{
+  width: 315px;
+height: 16px;
+
+display: flex;
+
+justify-content: flex-end;
+text-align: right;
+font: normal normal normal 12px/16px Nunito;
+letter-spacing: 0px;
+color: #B1B1B1;
+opacity: 1;
 }
 .Input{
     background: #F4F4F4 0% 0% no-repeat padding-box;
@@ -106,6 +124,18 @@ height: 45px;
 padding-left: 15px;
 border: none;
 margin-bottom: 5px;
+text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #3E3E3E;
+opacity: 1;
+}
+input:focus { 
+  outline: none !important;
+ 
+  border: 1px solid #4B9CE2;
+border-radius: 8px;
+  background-color: #F0F8FF;
 }
 .Input::placeholder{
 
@@ -116,14 +146,15 @@ color: #99A0A7;
 opacity: 1;
 display: flex;
 justify-content: center;
-width: 147px;
+width: 150px;
 height: 25px;
+
 }
 .Button{
     width: 315px;
 height: 45px;
-/* UI Properties */
-background: var(--unnamed-color-4b9ce2) 0% 0% no-repeat padding-box;
+
+
 background: #4B9CE2 0% 0% no-repeat padding-box;
 border-radius: 8px;
 opacity: 1;
@@ -141,7 +172,7 @@ opacity: 1;
 .Footer{
     width: 172px;
 height: 20px;
-/* UI Properties */
+
 text-align: center;
 letter-spacing: 0px;
 opacity: 1;

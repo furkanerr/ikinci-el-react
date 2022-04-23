@@ -6,7 +6,7 @@ function SignUp() {
   return (
     <div className={RegisterStyle.Container}>
         <div className={RegisterStyle.Icon}>
-            <İkinciElLogo/>
+            {/* <İkinciElLogo/> */}
         </div>
       <div className={RegisterStyle.RegisterFormContainer}>
         <div className={RegisterStyle.Header}>
@@ -22,7 +22,7 @@ function SignUp() {
                     </div>
                     <div className={RegisterStyle.Password}>
                         <label className={RegisterStyle.Label} htmlFor="password">Şifre</label>
-                        <input className={RegisterStyle.Input} type="password" name="password" placeholder="*****" />
+                        <input className={RegisterStyle.Input} type="password" name="password" placeholder="•••••" />
                     </div>
                     <div className={RegisterStyle.RegisterButton}>
                         <button className={RegisterStyle.Button} type="submit">Üye Ol</button>
@@ -32,9 +32,9 @@ function SignUp() {
 
         </div>
         <div className={RegisterStyle.Footer}>
-            <span className="FooterTextHesabınVarmi">Hesabın var mı?</span>
-            <Link to={"/signin"}>
-            <span className="FooterTextGirisYap">Giriş Yap</span>
+            <span className={RegisterStyle.FooterTextHesabınVarmi}>Hesabın var mı?</span>
+            <Link to={"/signin"} style={{textDecoration:'none'}}>
+            <span className={RegisterStyle.FooterTextGirisYap}>Giriş Yap</span>
             </Link>
         </div>
       </div>
