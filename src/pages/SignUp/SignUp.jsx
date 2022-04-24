@@ -1,28 +1,50 @@
+import { useFormik } from "formik";
 import React from "react";
 import { Link } from "react-router-dom";
 import RegisterStyle from "../../styles/RegisterStyle/RegisterStyle.module.css";
-import İkinciElLogo from '../../constants/Icons/İkinicElLogo';
+import RegisterValidation from "../../constants/Validations/registerValidation";
 function SignUp() {
+
+
+    const formik = useFormik({
+        initialValues: {
+          email: "",
+          password: "",
+        },
+        validationSchema: RegisterValidation,
+        onSubmit: (values) => {
+          console.log(values);
+        },
+      });
+
   return (
     <div className={RegisterStyle.Container}>
-        <div className={RegisterStyle.Icon}>
-            {/* <İkinciElLogo/> */}
-        </div>
-      <div className={RegisterStyle.RegisterFormContainer}>
+        <div className={RegisterStyle.ImageLeft}></div> 
+        
+      <div className={RegisterStyle.FormContainer}>
+      <div className={RegisterStyle.Icon}>
+           
+           </div>
         <div className={RegisterStyle.Header}>
             <div className={RegisterStyle.UyeOlHeaderText}>Üye Ol</div>
             <div className={RegisterStyle.TextUnderHeader}>Fırsatlardan yararlanmak için üye ol!</div>
         </div>
         <div className={RegisterStyle.Form}>
-            <form>
+            <form onSubmit={formik.handleSubmit}>
                 <div className={RegisterStyle.FormElements}>
                     <div className={RegisterStyle.Email}>
                         <label className={RegisterStyle.Label} htmlFor="email">Email</label>
-                        <input className={RegisterStyle.Input} type="email" name="email"  placeholder="Email@example.com" />
+                        <input className={RegisterStyle.Input} 
+                        onChange={formik.handleChange}
+                        value={formik.values.email}
+                        type="email" name="email"  placeholder="Email@example.com" />
                     </div>
                     <div className={RegisterStyle.Password}>
                         <label className={RegisterStyle.Label} htmlFor="password">Şifre</label>
-                        <input className={RegisterStyle.Input} type="password" name="password" placeholder="•••••" />
+                        <input className={RegisterStyle.Input}
+                        onChange={formik.handleChange}
+                        value={formik.values.password}
+                        type="password" name="password" placeholder="•••••" />
                     </div>
                     <div className={RegisterStyle.RegisterButton}>
                         <button className={RegisterStyle.Button} type="submit">Üye Ol</button>

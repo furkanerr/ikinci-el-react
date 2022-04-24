@@ -1,4 +1,205 @@
 @import url("https://use.typekit.net/tzk0mwo.css");
+.Container {
+  display: flex;
+
+  align-items: center;
+  height: 100vh;
+  background-color: #FBFBFB;
+  
+}
+
+  @media screen  and (min-width: 1024px) {
+    .ImageLeft{
+      top: 0px;
+    left: 0px;
+    width: 835px;
+    height: 100%;
+    position: relative;
+    background: transparent url('../../img/Group\ 52.png ') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    }
+  }
+    
+  
+ 
+
+
+.FormContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 569px;
+  height: 554px;
+ 
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 12px #1e36480a;
+  border-radius: 8px;
+  opacity: 1;
+  padding-bottom: 14px;
+  margin-left: 250px;
+ 
+}
+.Icon {
+
+  width: 298px;
+  height: 97px;
+  position: relative;
+    bottom: 153px;
+  background: transparent url("../../img/Group\ 6607@2x.png") 0% 0% no-repeat
+  padding-box;
+
+  opacity: 1;
+}
+
+.FormElements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.UyeOlHeaderText {
+  width: 99px;
+  height: 43px;
+  
+ 
+text-align: center;
+font: normal normal bold 32px/43px Nunito;
+letter-spacing: 0px;
+color: #525252;
+opacity: 1;
+}
+.TextUnderHeader {
+ 
+  width: 258px;
+height: 20px;
+  
+
+  text-align: center;
+  font: normal normal normal 15px/20px Nunito;
+  letter-spacing: 0px;
+  color: #525252;
+  opacity: 1;
+}
+.FormElements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Label {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  width: 30px;
+  height: 20px;
+  font: normal normal normal 15px/20px Nunito;
+  letter-spacing: 0px;
+  color: #525252;
+  opacity: 1;
+  margin-bottom: 4px;
+}
+.Password{
+    margin-top: 15px;
+    position: relative;
+    
+}
+
+.Input{
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+border-radius: 8px;
+opacity: 1;
+width: 374px;
+height: 45px;
+padding-left: 15px;
+border: none;
+margin-bottom: 5px;
+text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #3E3E3E;
+opacity: 1;
+}
+input:focus { 
+  outline: none !important;
+ 
+  border: 1px solid #4B9CE2;
+border-radius: 8px;
+  background-color: #F0F8FF;
+}
+.Input::placeholder{
+
+    text-align: left;
+    width: 149px;
+    height: 22px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 16px/22px Nunito;
+    letter-spacing: 0px;
+    color: #99A0A7;
+    opacity: 1;
+
+}
+.Button{
+  width: 389px;
+  height: 45px;
+
+
+background: #4B9CE2 0% 0% no-repeat padding-box;
+border-radius: 8px;
+opacity: 1;
+border: none;
+color: var(--unnamed-color-ffffff);
+text-align: center;
+font: normal normal bold 18px/24px Nunito;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+.RegisterButton{
+    margin-top: 13px;
+}
+.Footer{
+  width: 172px;
+  height: 20px;
+
+text-align: center;
+letter-spacing: 0px;
+opacity: 1;
+margin-top: 13px;
+margin-bottom: 45px;
+
+
+}
+.FooterTextHesabınVarmi{
+    width: 110px;
+height: 20px;
+text-align: center;
+font: normal normal normal 15px/20px Nunito;
+letter-spacing: 0px;
+color: #525252;
+}
+.FooterTextGirisYap{
+    width: 61px;
+height: 20px;
+margin-left: 2px;
+text-align: center;
+font: normal normal bold 15px/20px Nunito;
+letter-spacing: 0px;
+color: #4B9CE2;
+text-decoration: none;
+}
+@media screen and (max-width: 375px) {
+ 
 
 .Container {
   display: flex;
@@ -9,7 +210,7 @@
   background-color: #f2f2f2;
   
 }
-.RegisterFormContainer {
+.FormContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +223,9 @@
   border-radius: 8px;
   opacity: 1;
   padding-bottom: 14px;
+  margin-left: 0px;
+  position: relative;
+    top: 101px;
 }
 .Icon {
   margin-top: 29px;
@@ -29,6 +233,10 @@
   margin-right: 113px;
   width: 149px;
   height: 71px;
+  position: absolute;
+  bottom: 450px;
+  
+  left:-10px;
   background: transparent url("../../img/Group\ 6607.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
@@ -166,4 +374,5 @@ font: normal normal bold 15px/20px Nunito;
 letter-spacing: 0px;
 color: #4B9CE2;
 text-decoration: none;
+}
 }
