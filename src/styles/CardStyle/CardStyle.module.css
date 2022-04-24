@@ -1,0 +1,61 @@
+@import url("https://use.typekit.net/tzk0mwo.css");
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 8px;
+  width: 280px;
+  height: 392px;
+
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.Image {
+  width: 260px;
+  height: 297px;
+  /* UI Properties */
+  background: transparent url("../../img/Image\ 5.png") 0% 0% no-repeat
+    padding-box;
+  border-radius: 8px;
+  opacity: 1;
+}
+.Middle {
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.Brand {
+  text-align: left;
+  font: normal normal bold 15px/22px Nunito;
+  letter-spacing: 0px;
+  color: #4b9ce2;
+  opacity: 1;
+}
+.ColorContainer {
+  width: 83px;
+  height: 18px;
+}
+.ColorHeader {
+  text-align: left;
+  font: normal normal bold 13px/22px Nunito;
+  letter-spacing: 0px;
+  color: #3e3e3e;
+}
+.Color {
+  text-align: left;
+  font: normal normal normal 13px/22px Nunito;
+  letter-spacing: 0px;
+  color: #3e3e3e;
+}
+.Price {
+  text-align: left;
+  font: normal normal bold 18px/22px Nunito;
+  letter-spacing: 0px;
+  color: #3e3e3e;
+  opacity: 1;
+  margin-top: 26px;
+}
