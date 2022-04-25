@@ -1,9 +1,12 @@
 import React from 'react'
 import CardStyle from '../../styles/CardStyle/CardStyle.module.css'
+import ProductImage  from '../../img/Image 5.png'
 function Card() {
   return (
     <div className={CardStyle.Container}>
-        <div className={CardStyle.Image}></div>
+        <div className={CardStyle.Image}>
+          <img className={CardStyle.ProductImage} src={ProductImage}/>
+        </div>
         <div className={CardStyle.Middle}>
             <div className={CardStyle.Brand}>Lev'is</div>
             <div className={CardStyle.ColorContainer}>

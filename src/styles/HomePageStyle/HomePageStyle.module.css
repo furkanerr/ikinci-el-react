@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+.Container{
+    width: 100%;
+    height: max-content;
+background: #F2F2F2 0% 0% no-repeat padding-box;
+padding-bottom: 161px;
+
+}
+.Banner{
+    width: 77%;
+
+
+border-radius: 8px;
+margin-top: 20px;
+}
+.BannerImage{
+    width:100%
+}
+.Content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.CardContainer{
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    justify-items: end;
+    margin: 30px auto 0;
+    row-gap: 20px;
+    width: 77%;
+}
+@media  screen and (max-width: 375px){
+    .Banner{
+        width: 355px;
+    height: 100px;
+    /* background: transparent url('../../img/Banner1.png') 0% 0% no-repeat padding-box; */
+    border-radius: 8px;
+    margin-top: 20px;
+    }
+    .BannerImage{
+        width: 100%!important;
+        height: 100px;
+        border-radius: 8px;
+    }
+    .CardContainer{
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    justify-items: end;
+    margin: 16px 5px 30px 5px;
+    row-gap: 9px;
+    width: 77%;
+    /* gap: 25px; */
+    column-gap: 82px;
+    }
+}
+    
+
