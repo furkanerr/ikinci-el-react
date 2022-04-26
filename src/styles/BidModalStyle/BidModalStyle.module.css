@@ -1,0 +1,212 @@
+.Container{
+    width: 480px;
+    height: 461px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 12px #1E36482E;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap:20px;
+}
+.Top{
+    width: 441px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.RadioButtons{
+    width: 436px;
+    border: 1px solid #E0E0E0;
+border-radius: 8px;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding-left: 5px;
+
+}
+.Bid{
+    width: 441px;
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+border-radius: 8px;
+height: 45px;
+}
+.Product{
+    width: 441px;
+    height: 50px;
+    background: #F0F8FF 0% 0% no-repeat padding-box;
+border-radius: 10px;
+padding: 5px;
+}
+.ProductImgAndName{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+}
+.ImgAndName{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ProductImgAndName img{
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+}
+.ProductPrice{
+    text-align: left;
+font: normal normal bold 15px/23px Nunito;
+letter-spacing: 0px;
+color: #525252;
+
+}
+.BidText{
+    text-align: left;
+font: normal normal bold 25px/23px Nunito;
+letter-spacing: 0px;
+color: #525252;
+}
+.Button{
+    background: #4B9CE2 0% 0% no-repeat padding-box;
+border-radius: 8px;
+width: 315px;
+height: 45px;
+text-align: center;
+font: normal normal bold 18px/24px Nunito;
+letter-spacing: 0px;
+color: #FFFFFF;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+.ProductName{
+    text-align: left;
+font: normal normal normal 13px/16px Nunito;
+letter-spacing: 0px;
+color: #555555;
+}
+.Bid Input{
+    width: 422px;
+height: 45px;
+/* UI Properties */
+background: #F4F4F4 0% 0% no-repeat padding-box;
+border-radius: 8px;
+padding-left: 15px;
+}
+.Bid Input::placeholder{
+    text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #99A0A7;
+}
+.RadioButtons Input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+label{
+font: normal normal normal 15px/20px Nunito;
+letter-spacing: 0px;
+color: #525252;
+text-align: left;
+
+width: 100%;
+display: flex;
+align-items: center;
+
+transition: all 0.3s;
+
+}
+input[type="radio"]:checked+label{
+    text-align: left;
+font: normal normal normal 15px/20px Nunito;
+letter-spacing: 0px;
+color: #4B9CE2;
+width: 100%;
+display: flex;
+align-items: center;
+
+
+}
+input[type="radio"]:checked+ .RadioButtons{
+    background: #F0F8FF 0% 0% no-repeat padding-box;
+    border: 1px solid #4B9CE2;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:375px) {
+    .Container{
+        width: 355px;
+height: 407px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 12px #1E36482E;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
+    }
+    .Bid Input{
+        width: 300px;
+        height: 45px;
+        background: #F4F4F4 0% 0% no-repeat padding-box;
+        border-radius: 8px;
+        padding-left: 15px;
+    }
+    .Bid{
+        width: 315px;
+        background: #F4F4F4 0% 0% no-repeat padding-box;
+        border-radius: 8px;
+        height: 40px;
+    }
+    .RadioButtons{
+        width: 315px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px;
+    }
+    .Product{
+        width: 315px;
+    height: 42px;
+    background: #F0F8FF 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    padding: 5px;
+    }
+    .BidText{
+        text-align: left;
+        font: normal normal bold 18px/23px Nunito;
+        letter-spacing: 0px;
+        color: #525252;
+    }
+    .Top{
+        width: 315px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .ProductImgAndName img{
+        border-radius: 8px;
+        width: 36px;
+        height: 36px;
+    }
+    .Button{
+        background: #4B9CE2 0% 0% no-repeat padding-box;
+border-radius: 8px;
+width: 315px;
+height: 40px;
+text-align: center;
+font: normal normal bold 18px/24px Nunito;
+letter-spacing: 0px;
+color: #FFFFFF;
+    }
+}

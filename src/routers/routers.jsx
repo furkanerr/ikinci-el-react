@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import BidModal from '../components/BidModal/BidModal'
 import Card from '../components/Card/Card'
 import Navbar from '../components/Navbar/Navbar'
 
