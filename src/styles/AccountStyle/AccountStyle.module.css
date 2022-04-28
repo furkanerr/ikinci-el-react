@@ -1,0 +1,81 @@
+.CardContainer{
+  
+
+width: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+
+}
+.Header{
+    width: 70%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 8px;
+margin-top: 10px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: row;
+padding:15px;
+gap: 15px;
+}
+.Picture{
+
+    width: 38px;
+height: 38px;
+border-radius: 50%;
+}
+.Email{
+    text-align: left;
+font: normal normal bold 15px/20px Nunito;
+letter-spacing: 0px;
+color: #525252;
+}
+.Content{
+    width: 77%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 8px;
+margin-top: 10px;
+display: flex;
+
+justify-content: center;
+flex-direction: column;
+}
+.ContentBody{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ContentHeader{
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 4%;
+}
+.TeklifAldiklarim{
+    font: normal normal bold 15px/20px Nunito;
+    border-bottom: 1px solid #F2F2F2;
+    padding-bottom: 6px;
+}
+.TeklifVerdiklerim{
+    font: normal normal bold 15px/20px Nunito;
+    border-bottom: 1px solid #F2F2F2;
+    padding-bottom: 6px;
+}
+
+@media screen and (max-width:375px) 
+{
+    .Header{
+        width: 87%;
+    }
+    .Content{
+        width: 95%;
+   
+}
+.ContentHeader{
+    margin-left: 17%;
+}
+}

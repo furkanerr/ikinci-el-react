@@ -109,7 +109,7 @@ color: #99A0A7;
     height: 20px;
     cursor: pointer;
 }
-label{
+.Container label{
 font: normal normal normal 15px/20px Nunito;
 letter-spacing: 0px;
 color: #525252;
@@ -122,7 +122,7 @@ align-items: center;
 transition: all 0.3s;
 
 }
-input[type="radio"]:checked+label{
+.Container input[type="radio"]:checked+label{
     text-align: left;
 font: normal normal normal 15px/20px Nunito;
 letter-spacing: 0px;
@@ -133,7 +133,7 @@ align-items: center;
 
 
 }
-input[type="radio"]:checked+ .RadioButtons{
+.Container input[type="radio"]:checked+ .RadioButtons{
     background: #F0F8FF 0% 0% no-repeat padding-box;
     border: 1px solid #4B9CE2;
     border-radius: 8px;

@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+.CardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Content {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  height: 812px;
+  width: 77%;
+  display: flex;
+}
+.Left {
+  text-align: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.Header {
+  text-align: left;
+  font: normal normal bold 25px/23px Nunito;
+  letter-spacing: 0px;
+  color: #525252;
+}
+.Left label {
+  text-align: left;
+  font: normal normal normal 15px/20px Nunito;
+  letter-spacing: 0px;
+  color: #525252;
+}
+.ProductName {
+  display: flex;
+
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.ProductInfo {
+  display: flex;
+
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.ProductName input {
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  width: 91%;
+  height: 45px;
+  padding-left: 10px;
+}
+.ProductInfo textarea {
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  width: 91%;
+  height: 92px;
+  padding-left: 10px;
+}
+.Category select {
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  width: 95%;
+  height: 45px;
+}
+.Brand select {
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  width: 95%;
+  height: 45px;
+}
+.Color select {
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  width: 95%;
+  height: 45px;
+}
+.KullanimDurumu select {
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  width: 95%;
+  height: 45px;
+}
+.CategoryAndBrandContainer {
+  display: flex;
+  flex-direction: row;
+gap: 1rem;
+  width: 96%;
+}
+.ColorAndOtherContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 96%;
+}
+.Category{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.Brand{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.Color{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.KullanimDurumu{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.ProductName input::placeholder{
+    text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #99A0A7;
+}
+
+.ProductInfo textarea::placeholder{
+    text-align: left;
+
+    font: normal normal normal 16px/22px Nunito;
+    letter-spacing: 0px;
+    color: #99A0A7;
+}
+.CardContainer select{
+    text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #99A0A7;
+margin-bottom: 20px;
+}
+.CardContainer input {
+    text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #3E3E3E;
+margin-bottom: 30px;
+}
+.CardContainer textarea {
+    text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #3E3E3E;
+padding-left: 10px;
+margin-bottom: 30px;
+}
+.PriceContainer{
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+    
+}
+.PriceContainer .PriceInput{
+    width: 100%;
+height: 45px;
+/* UI Properties */
+background: #F4F4F4 0% 0% no-repeat padding-box;
+border-radius: 8px;
+}
+.BidOption span{
+    text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #B1B1B1;
+}
+.PriceInput::placeholder{
+    text-align: left;
+font: normal normal normal 16px/22px Nunito;
+letter-spacing: 0px;
+color: #99A0A7;
+}
+.Toggle{
+    position: relative;
+}
+.Toggle input{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.Slider{
+    position: relative;
+  display: block;
+  cursor: pointer;
+  transition: all 0.4s;
+  width: 44px;
+  height: 24px;
+  background-color: #EBEBEB;
+  border-radius: 30px;
+}
+.Slider::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    transition: all 0.4s;
+    top: 3px;
+    left: 3px;
+    border-radius: 50px;
+}
+.BidOption{
+    display: flex;
+    justify-content: space-between;
+   margin-top: 10px;
+    
+}
+.BidOption input:checked + .Slider{
+    background: #4B9CE2 0% 0% no-repeat padding-box;
+}
+.BidOption input:checked + .Slider::before{
+    left: calc(50%);
+}
+.RightHeader{
+    text-align: left;
+font: normal normal bold 25px/23px Nunito;
+letter-spacing: 0px;
+color: #525252;
+}
+.Right{
+    
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.ImageUploadContainer{
+   
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px dashed #B1B1B1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Right input[type="file"]{
+
+display: none;
+
+}
+.ImageUpload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.InputLabel{
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+border-radius: 15px;
+width: 122px;
+height: 30px;
+text-align: center;
+font: normal normal normal 15px/23px Nunito;
+letter-spacing: 0px;
+color: #B1B1B1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.SubmitProductButton{
+    background: #4B9CE2 0% 0% no-repeat padding-box;
+border-radius: 8px;
+margin-top: auto;
+margin-bottom: 2rem;
+
+margin-left: 10%;
+width: 85%;
+height: 45px;
+position: relative;
+}
+.SubmitProductButton button {
+    background: #4B9CE2 0% 0% no-repeat padding-box;
+    text-align: center;
+font: normal normal bold 18px/24px Nunito;
+letter-spacing: 0px;
+color: #FFFFFF;
+width: 50%;
+height: 45px;
+border-radius: 8px;
+border: none;
+position: relative;
+}
+@media screen and (max-width: 768px){
+    .Content{
+        background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    height: min-content;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    }
+    .SubmitProductButton{
+        margin-top: 0.5rem;
+    }
+    .CategoryAndBrandContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .ColorAndOtherContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .Category{
+       
+        width: 100%;
+    }
+    .Left{
+        width: 98%;
+    }
+    .PriceContainer{
+        width: 93%;
+    }
+    .Brand{
+        width: 100%;
+    }
+    .KullanimDurumu{
+        width: 100%;
+    }
+    .Color{
+        width: 100%;
+    }
+    .Right{
+        width: 87%;
+    }
+}
