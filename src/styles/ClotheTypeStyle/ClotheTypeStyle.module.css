@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 .Container{
-  display: flex;
+ 
   align-items: center;
-  justify-content: space-around;
-  width: 77%;
+    justify-content: space-around;
+
   border-bottom: 1px solid #E0E0E0;
   
+  display: flex;
+  width: 77%;
+  grid-auto-flow: column;
+  grid-auto-columns: 10%;
+
 }
+
+
+
 .ClotheTypeName{
     text-align: center;
 font: normal normal 600 18px/24px Nunito;
@@ -15,7 +23,7 @@ color: #525252;
 opacity: 1;
 display: flex;
 border-bottom: 1px solid #E0E0E0;
-
+width: 0.05%;
 position: relative;
 margin-top: 30px;
     top: 1px;
@@ -24,23 +32,28 @@ margin-top: 30px;
 
 @media screen and (max-width: 375px){
     .Container{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 96%;
+        width: 98%;
         border-bottom: 1px solid #E0E0E0;
-        overflow-x: scroll;
-                overflow-y: hidden;
-                overflow-wrap: break-word;
+        display: grid;
+        gap: 1.5rem;
+        justify-content: normal;
+        grid-auto-flow: column;
+        grid-auto-columns: 20%;
+        overflow-x:auto;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
+        
+        overflow-y: hidden; 
+              
                
       }
       .ClotheTypeName{
         text-align: center;
     font: normal normal 600 18px/24px Nunito;
-    letter-spacing: 0px;
+    gap: 1rem;
     color: #525252;
-    opacity: 1;
-    display: flex;
+   width: fit-content;
+    display: grid;
     border-bottom: 1px solid #E0E0E0;
     margin: 0 5px 0 5px;
     position: relative;
