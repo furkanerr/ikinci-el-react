@@ -3,6 +3,7 @@ import NavbarStyle from "../../styles/NavbarStyle/NavbarStyle.module.css";
 import PlusIcon from "../../constants/Icons/plusIcon";
 import PersonIcon from "../../constants/Icons/personIcon";
 import Logo from '../../img/Group 6607.png'
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className={NavbarStyle.Navbar}>
@@ -18,7 +19,9 @@ function Navbar() {
         <div className={NavbarStyle.PersonIcon}>
           <PersonIcon />
         </div>
+        <Link to={'/signin'}>
         <div className={NavbarStyle.LoginButton}>Giriş Yap</div>
+        </Link>
       </div>
     </div>
   );
