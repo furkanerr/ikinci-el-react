@@ -15,7 +15,13 @@ import SignUp from '../pages/SignUp/SignUp'
 function Routers() {
     return (
      <Routes>
-        <Route path="/" element={<ProductUpload/>} />
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/account" element={<AccountPage/>} />
+         <Route path="/signin" element={<SignIn/>} />
+         <Route path="/signup" element={<SignUp/>} />
+         <Route path="/productdetail" element={<ProductDetailPage/>} />
+         <Route path="/productupload" element={<ProductUpload/>} />
+         
         
      </Routes>
     )
