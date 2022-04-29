@@ -8,6 +8,10 @@ justify-content: space-around;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 
 }
+a{
+    text-decoration: none;
+    color: #000000;
+}
 .Logo{
     width: 150px;
 height: 50px;

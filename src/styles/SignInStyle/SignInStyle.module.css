@@ -102,7 +102,7 @@ height: 20px;
   font: normal normal normal 15px/20px Nunito;
   letter-spacing: 0px;
   color: #525252;
-  opacity: 1;
+
   margin-bottom: 4px;
 }
 .Password{
@@ -116,7 +116,8 @@ height: 20px;
   top: 40px;
   width: 19px;
   height: 14px;
-  opacity: 1;
+
+  cursor: pointer;
 }
 .PasswordRemember{
   width: 389px;
@@ -129,12 +130,12 @@ text-align: right;
 font: normal normal normal 12px/16px Nunito;
 letter-spacing: 0px;
 color: #B1B1B1;
-opacity: 1;
+
 }
 .Input{
     background: #F4F4F4 0% 0% no-repeat padding-box;
 border-radius: 8px;
-opacity: 1;
+
 width: 374px;
 height: 45px;
 padding-left: 15px;
@@ -144,7 +145,7 @@ text-align: left;
 font: normal normal normal 16px/22px Nunito;
 letter-spacing: 0px;
 color: #3E3E3E;
-opacity: 1;
+
 }
 input:focus { 
   outline: none !important;
@@ -158,12 +159,12 @@ border-radius: 8px;
     text-align: left;
     width: 147px;
     height: 22px;
-    /* UI Properties */
+
     text-align: left;
     font: normal normal normal 16px/22px Nunito;
     letter-spacing: 0px;
     color: #99A0A7;
-    opacity: 1;
+
 
 }
 .Button{
@@ -173,14 +174,14 @@ border-radius: 8px;
 
 background: #4B9CE2 0% 0% no-repeat padding-box;
 border-radius: 8px;
-opacity: 1;
+
 border: none;
 color: var(--unnamed-color-ffffff);
 text-align: center;
 font: normal normal bold 18px/24px Nunito;
-letter-spacing: 0px;
+
 color: #FFFFFF;
-opacity: 1;
+
 }
 .RegisterButton{
     margin-top: 13px;
@@ -190,8 +191,7 @@ opacity: 1;
   height: 20px;
 
 text-align: center;
-letter-spacing: 0px;
-opacity: 1;
+
 margin-top: 13px;
 margin-bottom: 45px;
 
@@ -202,7 +202,7 @@ margin-bottom: 45px;
 height: 20px;
 text-align: center;
 font: normal normal normal 15px/20px Nunito;
-letter-spacing: 0px;
+
 color: #525252;
 }
 .FooterTextGirisYap{
@@ -237,7 +237,7 @@ text-decoration: none;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 12px #1e36480a;
   border-radius: 8px;
-  opacity: 1;
+
   padding-bottom: 14px;
   margin-left: 0px;
   position: relative;
@@ -255,7 +255,7 @@ text-decoration: none;
   left:-10px;
   background: transparent url("../../img/Group\ 6607.png") 0% 0% no-repeat
     padding-box;
-  opacity: 1;
+
 }
 .FormElements {
   display: flex;
@@ -280,7 +280,7 @@ text-decoration: none;
   font: normal normal bold 32px/43px Nunito;
   letter-spacing: 0px;
   color: #525252;
-  opacity: 1;
+
 }
 .TextUnderHeader {
  
@@ -292,7 +292,7 @@ text-decoration: none;
   font: normal normal normal 15px/20px Nunito;
   letter-spacing: 0px;
   color: #525252;
-  opacity: 1;
+  
 }
 .FormElements {
   display: flex;
@@ -310,7 +310,7 @@ text-decoration: none;
   font: normal normal normal 15px/20px Nunito;
   letter-spacing: 0px;
   color: #525252;
-  opacity: 1;
+
   margin-bottom: 4px;
 }
 .Password{
@@ -324,7 +324,7 @@ text-decoration: none;
   top: 40px;
   width: 19px;
   height: 14px;
-  opacity: 1;
+ 
 }
 .PasswordRemember{
   width: 315px;
@@ -337,12 +337,12 @@ text-align: right;
 font: normal normal normal 12px/16px Nunito;
 letter-spacing: 0px;
 color: #B1B1B1;
-opacity: 1;
+
 }
 .Input{
     background: #F4F4F4 0% 0% no-repeat padding-box;
 border-radius: 8px;
-opacity: 1;
+
 width: 300px;
 height: 45px;
 padding-left: 15px;
@@ -352,7 +352,7 @@ text-align: left;
 font: normal normal normal 16px/22px Nunito;
 letter-spacing: 0px;
 color: #3E3E3E;
-opacity: 1;
+
 }
 input:focus { 
   outline: none !important;
@@ -367,7 +367,7 @@ border-radius: 8px;
 font: normal normal normal 16px/22px Nunito;
 letter-spacing: 0px;
 color: #99A0A7;
-opacity: 1;
+
 display: flex;
 justify-content: center;
 width: 150px;
@@ -381,14 +381,14 @@ height: 45px;
 
 background: #4B9CE2 0% 0% no-repeat padding-box;
 border-radius: 8px;
-opacity: 1;
+
 border: none;
 color: var(--unnamed-color-ffffff);
 text-align: center;
 font: normal normal bold 18px/24px Nunito;
 letter-spacing: 0px;
 color: #FFFFFF;
-opacity: 1;
+
 }
 .RegisterButton{
     margin-top: 13px;
@@ -399,7 +399,7 @@ height: 20px;
 
 text-align: center;
 letter-spacing: 0px;
-opacity: 1;
+
 margin-top: 27px;
 
 
