@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 .CardContainer {
   display: flex;
   align-items: center;
@@ -34,13 +34,13 @@
 }
 .ProductName {
   display: flex;
-
+  position: relative;
   justify-content: flex-start;
   flex-direction: column;
 }
 .ProductInfo {
   display: flex;
-
+  position: relative;
   justify-content: flex-start;
   flex-direction: column;
 }
@@ -64,11 +64,36 @@
   width: 95%;
   height: 45px;
 }
+
 .Brand select {
   background: #f4f4f4 0% 0% no-repeat padding-box;
   border-radius: 8px;
   width: 95%;
   height: 45px;
+}
+select::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+select::-webkit-scrollbar-thumb {
+  background-color: #c5bdbd;
+  border: solid #f2f2f2;
+  border-radius: 10px;
+}
+select::-webkit-scrollbar-track {
+  border: rgb(180, 180, 180);
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+option:checked {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #4b9ce2;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+  border-radius: 10px;
 }
 .Color select {
   background: #f4f4f4 0% 0% no-repeat padding-box;
@@ -76,222 +101,310 @@
   width: 95%;
   height: 45px;
 }
+.Left input:focus{
+    border: 1px solid #4B9CE2;
+    background: #F0F8FF 0% 0% no-repeat padding-box;
+}
+.Left textarea:focus{
+    border: 1px solid #4B9CE2;
+    background: #F0F8FF 0% 0% no-repeat padding-box;
+}
+.Left select:focus{
+    text-align: left;
+    font: normal normal normal 16px/22px Nunito;
+    letter-spacing: 0px;
+    color: #B1B1B1;
+
+}
+.Left select:focus option:checked{
+    text-align: left;
+    font: normal normal normal 16px/22px Nunito;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+border-radius: 10px;
+border: #F2F2F2 1px solid;
+    color: #4B9CE2;
+    width: 30px;
+}
+.Color option {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+
+  color: #3e3e3e;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 12px #1e36482e;
+}
 .KullanimDurumu select {
   background: #f4f4f4 0% 0% no-repeat padding-box;
   border-radius: 8px;
   width: 95%;
   height: 45px;
 }
+.KullanimDurumu option {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+
+  color: #3e3e3e;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 12px #1e36482e;
+}
 .CategoryAndBrandContainer {
   display: flex;
   flex-direction: row;
-gap: 1rem;
+  gap: 1rem;
   width: 96%;
+  position: relative;
 }
-.ColorAndOtherContainer{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    width: 96%;
+.ColorAndOtherContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 96%;
+  position: relative;
 }
-.Category{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.Category {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
-.Brand{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.Category option {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+
+  color: #3e3e3e;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 12px #1e36482e;
 }
-.Color{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.Brand {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
-.KullanimDurumu{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.Brand option {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+
+  color: #3e3e3e;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 12px #1e36482e;
 }
-.ProductName input::placeholder{
-    text-align: left;
-font: normal normal normal 16px/22px Nunito;
-letter-spacing: 0px;
-color: #99A0A7;
+.Color {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.KullanimDurumu {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.ProductName input::placeholder {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #99a0a7;
 }
 
-.ProductInfo textarea::placeholder{
-    text-align: left;
+.ProductInfo textarea::placeholder {
+  text-align: left;
 
-    font: normal normal normal 16px/22px Nunito;
-    letter-spacing: 0px;
-    color: #99A0A7;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #99a0a7;
 }
-.CardContainer select{
-    text-align: left;
-font: normal normal normal 16px/22px Nunito;
-letter-spacing: 0px;
-color: #99A0A7;
-margin-bottom: 20px;
+.CardContainer select {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #99a0a7;
+  margin-bottom: 20px;
+
+  border-radius: 8px;
+  border: none;
 }
 .CardContainer input {
-    text-align: left;
-font: normal normal normal 16px/22px Nunito;
-letter-spacing: 0px;
-color: #3E3E3E;
-margin-bottom: 30px;
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #3e3e3e;
+  margin-bottom: 30px;
+  border: none;
 }
 .CardContainer textarea {
-    text-align: left;
-font: normal normal normal 16px/22px Nunito;
-letter-spacing: 0px;
-color: #3E3E3E;
-padding-left: 10px;
-margin-bottom: 30px;
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #3e3e3e;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  border: none;
 }
-.PriceContainer{
-    display: flex;
-    flex-direction: column;
-    width: 43%;
-    
+.PriceContainer {
+  display: flex;
+  flex-direction: column;
+  width: 43%;
+  position: relative;
 }
-.PriceContainer .PriceInput{
-    width: 100%;
-height: 45px;
-/* UI Properties */
-background: #F4F4F4 0% 0% no-repeat padding-box;
-border-radius: 8px;
+.PriceContainer .PriceInput {
+  width: 100%;
+  height: 45px;
+  /* UI Properties */
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  border: none;
 }
-.BidOption span{
-    text-align: left;
-font: normal normal normal 16px/22px Nunito;
-letter-spacing: 0px;
-color: #B1B1B1;
+.BidOption span {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #b1b1b1;
 }
-.PriceInput::placeholder{
-    text-align: left;
-font: normal normal normal 16px/22px Nunito;
-letter-spacing: 0px;
-color: #99A0A7;
+.PriceInput::placeholder {
+  text-align: left;
+  font: normal normal normal 16px/22px Nunito;
+  letter-spacing: 0px;
+  color: #99a0a7;
 }
-.Toggle{
-    position: relative;
+.Toggle {
+  position: relative;
 }
-.Toggle input{
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+.Toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.Slider{
-    position: relative;
+.Slider {
+  position: relative;
   display: block;
   cursor: pointer;
   transition: all 0.4s;
   width: 44px;
   height: 24px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border-radius: 30px;
 }
-.Slider::before{
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: #ffffff;
-    transition: all 0.4s;
-    top: 3px;
-    left: 3px;
-    border-radius: 50px;
+.Slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  transition: all 0.4s;
+  top: 3px;
+  left: 3px;
+  border-radius: 50px;
 }
-.BidOption{
-    display: flex;
-    justify-content: space-between;
-   margin-top: 10px;
-    
+.BidOption {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
-.BidOption input:checked + .Slider{
-    background: #4B9CE2 0% 0% no-repeat padding-box;
+.BidOption input:checked + .Slider {
+  background: #4b9ce2 0% 0% no-repeat padding-box;
 }
-.BidOption input:checked + .Slider::before{
-    left: calc(50%);
+.BidOption input:checked + .Slider::before {
+  left: calc(50%);
 }
-.RightHeader{
-    text-align: left;
-font: normal normal bold 25px/23px Nunito;
-letter-spacing: 0px;
-color: #525252;
+.RightHeader {
+  text-align: left;
+  font: normal normal bold 25px/23px Nunito;
+  letter-spacing: 0px;
+  color: #525252;
 }
-.Right{
-    
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
+.Right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
 }
-.ImageUploadContainer{
-   
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px dashed #B1B1B1;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.ImageUploadContainer {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px dashed #b1b1b1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.Right input[type="file"]{
+.Right input[type="file"] {
+  display: none;
+}
+.ImageUpload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.InputLabel {
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  border-radius: 15px;
+  width: 122px;
+  height: 30px;
+  text-align: center;
+  font: normal normal normal 15px/23px Nunito;
+  letter-spacing: 0px;
+  color: #b1b1b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SubmitProductButton {
+  background: #4b9ce2 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  margin-top: auto;
+  margin-bottom: 2rem;
 
-display: none;
-
-}
-.ImageUpload{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.InputLabel{
-    background: #F4F4F4 0% 0% no-repeat padding-box;
-border-radius: 15px;
-width: 122px;
-height: 30px;
-text-align: center;
-font: normal normal normal 15px/23px Nunito;
-letter-spacing: 0px;
-color: #B1B1B1;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.SubmitProductButton{
-    background: #4B9CE2 0% 0% no-repeat padding-box;
-border-radius: 8px;
-margin-top: auto;
-margin-bottom: 2rem;
-
-margin-left: 10%;
-width: 85%;
-height: 45px;
-position: relative;
+  margin-left: 10%;
+  width: 85%;
+  height: 45px;
+  position: relative;
 }
 .SubmitProductButton button {
-    background: #4B9CE2 0% 0% no-repeat padding-box;
-    text-align: center;
-font: normal normal bold 18px/24px Nunito;
-letter-spacing: 0px;
-color: #FFFFFF;
-width: 50%;
-height: 45px;
-border-radius: 8px;
-border: none;
-position: relative;
+  background: #4b9ce2 0% 0% no-repeat padding-box;
+  text-align: center;
+  font: normal normal bold 18px/24px Nunito;
+  letter-spacing: 0px;
+  color: #ffffff;
+  width: 50%;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  position: relative;
 }
-@media screen and (max-width: 768px){
-    .Content{
-        background: #ffffff 0% 0% no-repeat padding-box;
+.ImageConstraint {
+  text-align: center;
+  font: normal normal normal 12px/14px Nunito;
+  letter-spacing: 0px;
+  color: #b1b1b1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.CancelIcon {
+  position: relative;
+  left: -1rem;
+}
+.Error {
+  font-family: "Oxygen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  color: #ee6356;
+  top: 4.3rem;
+  position: absolute;
+}
+.ProductInfo .Error {
+  top: 7.5rem;
+}
+.ImagePreviewContainer {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .Content {
+    background: #ffffff 0% 0% no-repeat padding-box;
     border-radius: 8px;
     height: min-content;
     width: 95%;
@@ -300,40 +413,39 @@ position: relative;
     justify-content: center;
     flex-direction: column;
     margin-top: 10px;
-    }
-    .SubmitProductButton{
-        margin-top: 0.5rem;
-    }
-    .CategoryAndBrandContainer{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .ColorAndOtherContainer{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .Category{
-       
-        width: 100%;
-    }
-    .Left{
-        width: 98%;
-    }
-    .PriceContainer{
-        width: 93%;
-    }
-    .Brand{
-        width: 100%;
-    }
-    .KullanimDurumu{
-        width: 100%;
-    }
-    .Color{
-        width: 100%;
-    }
-    .Right{
-        width: 87%;
-    }
+  }
+  .SubmitProductButton {
+    margin-top: 0.5rem;
+  }
+  .CategoryAndBrandContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .ColorAndOtherContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Category {
+    width: 100%;
+  }
+  .Left {
+    width: 98%;
+  }
+  .PriceContainer {
+    width: 93%;
+  }
+  .Brand {
+    width: 100%;
+  }
+  .KullanimDurumu {
+    width: 100%;
+  }
+  .Color {
+    width: 100%;
+  }
+  .Right {
+    width: 87%;
+  }
 }

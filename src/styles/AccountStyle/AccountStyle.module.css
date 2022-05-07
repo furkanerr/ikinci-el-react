@@ -17,11 +17,31 @@ border-radius: 8px;
 margin-top: 10px;
 display: flex;
 align-items: center;
-justify-content: flex-start;
+justify-content: space-between;
 flex-direction: row;
 padding:15px;
-gap: 15px;
+
 }
+.SignOut{
+    text-align: left;
+    font: normal normal normal 15px/23px Nunito;
+    letter-spacing: 0px;
+    background-color: #e74c3c;
+    color: #FFFFFF;
+    width: 65px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.SignOut:hover{
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
 .Picture{
 
     width: 38px;
@@ -35,11 +55,12 @@ letter-spacing: 0px;
 color: #525252;
 }
 .Content{
-    width: 77%;
+    width: 70%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
 border-radius: 8px;
 margin-top: 10px;
 display: flex;
+padding:15px;
 
 justify-content: center;
 flex-direction: column;
@@ -49,11 +70,18 @@ flex-direction: column;
     align-items: center;
     flex-direction: column;
 }
+.ProfilePicture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
 .ContentHeader{
     gap: 10px;
     display: flex;
     align-items: flex-start;
-    margin-left: 4%;
+    margin-left: 1%;
 }
 .TeklifAldiklarim{
     font: normal normal bold 15px/20px Nunito;

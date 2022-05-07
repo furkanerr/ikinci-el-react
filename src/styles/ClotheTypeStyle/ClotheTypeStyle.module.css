@@ -18,9 +18,9 @@
 .ClotheTypeName{
     text-align: center;
 font: normal normal 600 18px/24px Nunito;
-letter-spacing: 0px;
+
 color: #525252;
-opacity: 1;
+
 display: flex;
 border-bottom: 1px solid #E0E0E0;
 width: 0.05%;
@@ -28,6 +28,11 @@ position: relative;
 margin-top: 30px;
     top: 1px;
     z-index: 999;
+    transition: all 0.3s;
+cursor: pointer;
+}
+.ClotheTypeName:hover{
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 375px){

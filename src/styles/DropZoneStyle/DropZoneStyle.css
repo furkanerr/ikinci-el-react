@@ -1,0 +1,26 @@
+.ImageUploadContainer-red{
+    border: 2px dashed #d83939;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+  
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ImageUploadContainer-blue{
+    border: 2px dashed #4B9CE2;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.SurukleBirak{
+    text-align: center;
+font: normal normal 600 14px/15px Nunito;
+letter-spacing: 0px;
+color: #525252;
+}

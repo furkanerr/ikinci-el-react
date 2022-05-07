@@ -50,7 +50,7 @@ justify-content: space-between;
 }
 .ImgAndName{
     display: flex;
-    align-items: center;
+    
     justify-content: flex-start;
 }
 .ProductImgAndName img{
@@ -83,6 +83,11 @@ color: #FFFFFF;
 justify-content: center;
 align-items: center;
 display: flex;
+transition: all 0.3s;
+cursor: pointer;
+}
+.Button:hover{
+    transform: scale(1.1);
 }
 .ProductName{
     text-align: left;
@@ -118,7 +123,7 @@ text-align: left;
 width: 100%;
 display: flex;
 align-items: center;
-
+height: 100%;
 transition: all 0.3s;
 
 }
@@ -138,6 +143,7 @@ align-items: center;
     border: 1px solid #4B9CE2;
     border-radius: 8px;
 }
+
 
 @media screen and (max-width:375px) {
     .Container{

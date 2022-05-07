@@ -1,6 +1,6 @@
 
 .Container{
-    width: 95%;
+    width: 98%;
 border: 1px solid #F2F2F2;
 border-radius: 8px;
 display: flex;
@@ -10,10 +10,11 @@ height: 105px;
     padding: 5px;
     margin-bottom: 10px;
 }
+
 .ImgAndınfo{
     display: flex;
     align-items: center;
-    justify-content: center;
+    
     flex-direction: row;
     gap: 10px;
 
@@ -36,6 +37,9 @@ border-radius: 8px;
 padding: 5px;
 margin-bottom: 5px;
 
+}
+.InfoContainer{
+    width: 200px
 }
 .Name{
     text-align: left;
@@ -75,6 +79,19 @@ height: 30px;
 display: flex;
 align-items: center;
 justify-content: center;
+transition: all 0.3s;
+cursor: pointer;
+border:none;
+}
+.Accept:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+
+}
+.Reject:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+
 }
 .Reject{
     background: #F77474 0% 0% no-repeat padding-box;
@@ -88,9 +105,24 @@ height: 30px;
 display: flex;
 align-items: center;
 justify-content: center;
+transition: all 0.3s;
+cursor: pointer;
+border:none;
+}
+.Accepted{
+    text-align: right;
+font: normal normal normal 15px/23px Nunito;
+letter-spacing: 0px;
+color: #4B9CE2;
+}
+.Rejected{
+    text-align: left;
+font: normal normal normal 15px/23px Nunito;
+letter-spacing: 0px;
+color: #F77474;
 }
 
-@media screen and (max-width:375px) 
+@media screen and (max-width:700px) 
 {
     .Container{
         width: 95%;
@@ -106,9 +138,12 @@ justify-content: center;
     .ButtonGroup{
         display: flex;
         /* align-items: center; */
-        /* justify-content: center; */
+         justify-content: flex-end; 
         gap: 6px;
         margin-left: 5.5rem;
         margin-top: 5px;
+    }
+    .InfoContainer{
+        width: 150px
     }
 }

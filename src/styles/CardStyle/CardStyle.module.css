@@ -12,7 +12,13 @@
   border-radius: 8px;
   opacity: 1;
   padding: 5px;
+  transition: all 0.3s;
+cursor: pointer;
 }
+.Container:hover {
+  transform: scale(1.1);
+}
+
 
 .Image {
   width: 250px;
