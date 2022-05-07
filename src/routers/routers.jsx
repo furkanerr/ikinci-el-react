@@ -1,29 +1,42 @@
+/** Dependencies */
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import AccountBidCard from '../components/AccountBidCard/AccountBidCard'
-import BidModal from '../components/BidModal/BidModal'
-import Card from '../components/Card/Card'
-import Navbar from '../components/Navbar/Navbar'
-import AccountPage from '../pages/AccountPage/AccountPage'
 
-import HomePage from '../pages/HomePage/HomePage'
-import ProductDetailPage from '../pages/ProductDetail/ProductDetailPage'
-import ProductUpload from '../pages/ProductUploadPage/ProductUpload'
-import SignIn from '../pages/SignIn/SignIn'
-import SignUp from '../pages/SignUp/SignUp'
+/** Components  */
+const AccountPage = React.lazy(()=>import('../pages/AccountPage/AccountPage'))
+const HomePage = React.lazy(() => import( '../pages/HomePage/HomePage') )
+const ProductDetailPage = React.lazy(() => import ('../pages/ProductDetail/ProductDetailPage')) 
+const ProductUpload = React.lazy( ()=> import ('../pages/ProductUploadPage/ProductUpload')) 
+const SignIn = React.lazy(()=> import('../pages/SignIn/SignIn')) 
+const SignUp = React.lazy(()=> import('../pages/SignUp/SignUp')) 
+const ProtectedRoute = React.lazy(()=> import('./protectedRoutes')) 
 
 function Routers() {
     return (
+<React.Suspense fallback={<div>Loading...</div>}>
      <Routes>
+         
         <Route path="/" element={<HomePage/>} />
-        <Route path="/account" element={<AccountPage/>} />
+        
+
+        <Route path="/account" element={
+            <ProtectedRoute>
+        <AccountPage/>
+            </ProtectedRoute>
+        } />
          <Route path="/signin" element={<SignIn/>} />
          <Route path="/signup" element={<SignUp/>} />
-         <Route path="/productdetail" element={<ProductDetailPage/>} />
-         <Route path="/productupload" element={<ProductUpload/>} />
-         
+         <Route path="/productdetail/:id" element={<ProductDetailPage/>} />
+         <Route path="/productupload" element={
+          <ProtectedRoute>
+         <ProductUpload/>
+         </ProtectedRoute>
+         } />
+         <Route path="/:category" element={<HomePage/>} />
         
      </Routes>
+      
+     </React.Suspense>
     )
   }
   
