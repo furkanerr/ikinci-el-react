@@ -1,15 +1,16 @@
 import "./App.css";
 import React from "react";
-import { ClotheCategoryProvider } from "./context/clotheCategoryContext";
-
+import { AuthProvider } from "./context/authContext";
 import Routers from "./routers/routers";
 
 function App() {
   return (
     <div className="App">
-      <ClotheCategoryProvider>
+      <AuthProvider>
+    
             <Routers />
-      </ClotheCategoryProvider>
+     
+      </AuthProvider>
     </div>
   );
 }
