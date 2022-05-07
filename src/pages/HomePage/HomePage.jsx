@@ -1,23 +1,63 @@
+/**Dependencies */
 import React,{useEffect,useState} from "react";
+import {useParams} from "react-router-dom";
+
+/**Context */
 import Navbar from "../../components/Navbar/Navbar";
-import HomePageStyle from "../../styles/HomePageStyle/HomePageStyle.module.css";
 import Card from "../../components/Card/Card";
 import ClotheTypes from "../../components/ClotheType/ClotheTypes";
+
+/**Icon */
 import Banner from '../../img/Banner1.png'
+/**Services */
 import api from '../../services/api'
-import { useCategory } from "../../context/clotheCategoryContext";
+
+/**Style */
+import HomePageStyle from "../../styles/HomePageStyle/HomePageStyle.module.css";
 function HomePage() {
-  const {productsByCategory} = useCategory();
+ 
   const [products,setProducts] = useState([])
+  const [limit,setLimit] = useState(10)
+  const [offset,setOffset] = useState(0)
+  const {category} = useParams();
+
+
+  const handleScroll = () => {
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight)
+    {
+     // setLimit(limit+10)
+    
+     setOffset(offset+10)
+      window.scrollBy(0, 100);
+  
+    }
+  }
+
+
+
   useEffect(() => { 
      const fetchData = async () => {
-      const response = await api.GetAllProducts();
-      setProducts(response)
+       if(category){
+        const response = await api.GetProductByCategory(category);
+        setProducts(response[0].products);
+       }
+       else{
+        const response = await api.GetAllProducts(limit,offset);
+        if(response.length > 0){
+        setProducts(prev => [...prev,...response]);
+        
+      
+        }
+        console.log(response)
+       }
+     
     }
-     fetchData();
+    window.addEventListener('scroll', () => handleScroll());
+    fetchData();
     console.log("çalıştı")
 
-  }, [])
+
+  }, [category,limit,offset])
 
   return (
     <div className={HomePageStyle.Container}>
@@ -32,7 +72,8 @@ function HomePage() {
           <ClotheTypes/>
         
       </div>
-      <div className={HomePageStyle.CardContainer}>
+     
+      <div className={HomePageStyle.CardContainer} >
         {
           products?.map(product => (
             <Card key={product.id} product={product}/>  
@@ -40,6 +81,7 @@ function HomePage() {
         }
      
       </div>
+      
     </div>
   );
 }
