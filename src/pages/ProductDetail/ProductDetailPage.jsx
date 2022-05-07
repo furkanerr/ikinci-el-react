@@ -62,6 +62,7 @@ function ProductDetailPage() {
     const response = await api.DeleteProduct(id);
     console.log(response);
     if (response.status === 200) {
+      setdeneme(deneme + 1);
       const notify = () => {
         toast.success("Ürün silme işlemi başarılı", {
           style: { backgroundColor: " #F1FFF0", color: "#46AF32" },
@@ -114,8 +115,8 @@ function ProductDetailPage() {
 
   const handleBuy = async () => {
     try {
-      const response = await api.UpdateProduct(data.id, {
-        users_permissions_user: user.data.id,
+      const response = await api.UpdateProduct(data?.id, {
+        users_permissions_user: user?.data?.id,
         isSold: true,
       });
       if (response.status == 200) {
