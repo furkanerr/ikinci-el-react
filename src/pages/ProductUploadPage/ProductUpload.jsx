@@ -22,6 +22,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { useAuth } from "../../context/authContext";
+
 toast.configure();
 function ProductUpload() {
   const [colors, setColors] = useState([]);
@@ -30,7 +32,7 @@ function ProductUpload() {
   const [usingStatus, setUsingStatus] = useState([]);
   const [images, setImages] = useState(null);
   const [userId, setUserId] = useState(0);
-
+  const { user } = useAuth();
   useEffect(() => {
     const fetchDatas = async () => {
       const { data } = await api.GetCategories();
@@ -38,8 +40,8 @@ function ProductUpload() {
       const { data: brands } = await api.GetAllBrands();
       const { data: usingStatus } = await api.GetAllUsingStatus();
 
-      const user = await api.FetchMe();
-      setUserId(user.data.id);
+     // const user = await api.FetchMe();
+      setUserId(user?.data?.id);
 
       setCategories(data);
       setColors(color);
