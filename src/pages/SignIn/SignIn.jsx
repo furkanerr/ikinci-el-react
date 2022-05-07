@@ -1,12 +1,35 @@
-import React,{useState} from 'react'
+/**Dependencies */
+import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import SignInStyle from '../../styles/SignInStyle/SignInStyle.module.css';
-import EyeIcon from '../../constants/Icons/eyeIcon';
+import {useNavigate} from "react-router-dom";
 import { useFormik } from 'formik';
-import LoginValidation from '../../constants/Validations/loginValidation';
-function SignIn() {
+import readCookie from '../../constants/CookieFunctions/readCookie';
 
+/**Style */
+import SignInStyle from '../../styles/SignInStyle/SignInStyle.module.css';
+
+/**Icon */
+import EyeIcon from '../../constants/Icons/eyeIcon';
+
+/**Validation */
+import LoginValidation from '../../constants/Validations/loginValidation';
+
+/**Services */
+import api from '../../services/api';
+
+/**Context */
+import { useAuth } from '../../context/authContext';
+
+/**Toastify */
+import {toast,ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure()  
+function SignIn() {
+    const {login} = useAuth();
     const [passwordType,setPasswordType]=useState('password');
+    let navigate = useNavigate();
+
 
     const handlePasswordType=()=>{
         if(passwordType==='password'){
@@ -21,13 +44,58 @@ function SignIn() {
           password: "",
         },
         validationSchema: LoginValidation,
-        onSubmit: (values) => {
-          console.log(values);
+        onSubmit: async (values) => {
+          try {
+              const response = await  api.Login({
+                    identifier: values.email,
+                    password: values.password,
+                });
+                if( response.status!==200){
+                    const notify = () => {
+                      
+                        toast.error("Emailiniz veya şifreniz hatalı",
+                       {
+                           style:{backgroundColor:' #FFE5E5',color:'#F77474'},
+                        
+                        autoClose: 3000,
+                        draggable: false,
+                        newestOnTop: true,
+                        position: "top-right",
+                        closeButton: false,
+                        progressBar: false,
+                        pauseOnHover: false,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        theme: "colored"
+                       }
+                            );
+                    }
+                    notify();
+                }
+                else{
+                console.log(response)
+                login(response.data);
+                navigate('/');
+                }
+          } catch (error) {
+           
+            console.log(error);
+
+          }
         },
       });
 
+      useEffect(() => {
+        const token = readCookie("access-token");
+        if(token){
+            navigate('/');
+        }
+
+      }, [])
+      
   return (
     <div className={SignInStyle.Container}>
+        <ToastContainer />
         <div className={SignInStyle.ImageLeft}></div> 
         
       <div className={SignInStyle.FormContainer}>

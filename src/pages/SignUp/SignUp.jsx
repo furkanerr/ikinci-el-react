@@ -1,12 +1,28 @@
+/**Dependencies */
 import { useFormik } from "formik";
-import React from "react";
-import { Link } from "react-router-dom";
+import React,{useEffect} from "react";
+import { Link, useNavigate } from "react-router-dom";
+import readCookie from "../../constants/CookieFunctions/readCookie";
+
+/***Style */
 import RegisterStyle from "../../styles/RegisterStyle/RegisterStyle.module.css";
+
+/**Validation */
 import RegisterValidation from "../../constants/Validations/registerValidation";
+
+/**Services */
 import api from '../../services/api';
+
+/**Context */
+import {useAuth} from '../../context/authContext';
+
+
+
+
 function SignUp() {
+  const {login} = useAuth();
 
-
+  let navigate = useNavigate();
     const formik = useFormik({
         initialValues: {
           email: "",
@@ -21,9 +37,7 @@ function SignUp() {
               password: values.password,
             });
             
-
-
-
+            login(response.data);
             console.log(response)
           } 
           catch (error) {
@@ -32,30 +46,22 @@ function SignUp() {
           
         },
       });
+      
     
-      const createCookie = (name, value, days) => {
-        var expires = "";
-        if (days) {
-          var date = new Date();
-          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-          expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-      };
-      const readCookie = (name) => {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) === " ") c = c.substring(1, c.length);
-          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-      };
-      const eraseCookie = (name) => {
-        createCookie(name, "", -1);
-      };
 
+
+
+      useEffect(() => {
+        const token = readCookie("access-token");
+        if(token){
+            navigate('/');
+        }
+        
+      }, [])
+    
+    
+     
+    
 
   return (
     <div className={RegisterStyle.Container}>
@@ -99,6 +105,7 @@ function SignUp() {
             <span className={RegisterStyle.FooterTextGirisYap}>Giriş Yap</span>
             </Link>
         </div>
+   
       </div>
     </div>
   );
