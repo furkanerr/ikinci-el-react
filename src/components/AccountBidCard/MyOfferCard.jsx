@@ -20,7 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure()  
 function MyOfferCard({offer}) {
 
-   
+
     const {user} = useAuth()
 
 useEffect(() => {
