@@ -76,7 +76,7 @@ const handleBuy =  async ()=>{
         </div>
         <div className={AccountBidCardStyle.ButtonGroup}>
           {
-            offer?.isStatus == true && offer?.product?.users_permissions_user == user.data.id && offer?.isSold == true &&
+            offer?.isStatus == true && offer?.product?.users_permissions_user == user?.data?.id && offer?.product?.isSold == true &&
             <span className={AccountBidCardStyle.Accepted}>Satın Alındı</span> 
             
           }
@@ -88,7 +88,7 @@ const handleBuy =  async ()=>{
           }
             
           {
-            offer?.isStatus == true && offer?.product.isSold == null && <span className={AccountBidCardStyle.Accept} 
+            offer?.isStatus == true && offer?.product.isSold == null || offer?.product?.isSold == false && <span className={AccountBidCardStyle.Accept} 
             onClick={() => handleBuy()}
             >Satın Al</span>
           }

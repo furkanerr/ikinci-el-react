@@ -41,8 +41,8 @@ function BidModal({
       try {
         const response = await api.MakeOffer({
           offerPrice: values.offerPrice,
-          product: data.id,
-          users_permissions_user: user.data.id,
+          product: data?.id,
+          users_permissions_user: user?.data?.id,
         });
         if (response.status === 200) {
           setdeneme(X=>X+1);

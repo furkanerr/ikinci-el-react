@@ -12,37 +12,48 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const[dependency,setDepen] = useState(0);
   let navigate = useNavigate();
 
   useEffect(() => {
-    (async () => {
-      try {
-        
-        const data = await api.FetchMe();
-        if(!data){
-          setLoggedIn(false);
-        }else{
-          console.log("çalişti")
-          setLoggedIn(true);
-          setUser(data);
-        }
-        console.log(user);
-        console.log(data);
-       console.log(loggedIn);
+    // (async () => {
+    //   try {
+    //     console.log("çalıştı")
+    //     const data = await api.FetchMe();
+    //     if(!data){
+    //       setLoggedIn(false);
+    //     }else{
+    //       console.log("çalişti")
+    //       setLoggedIn(true);
+    //       setUser(data);
+    //     }
+    //     console.log(user);
+    //     console.log(data);
+    //    console.log(loggedIn);
        
-      } catch (error) {
-       // setLoading(false);
+    //   } catch (error) {
+    //    // setLoading(false);
+    //   }
+    // })();
+    const fetchData = async () => {
+      const response = await api.FetchMe();
+      if(!response){
+        setLoggedIn(false);
+      }else{
+        console.log("çalişti")
+        setLoggedIn(true);
+        setUser(response);
       }
-    })();
+    }
+    fetchData();
     console.log(loggedIn);
-  }, []);
+  }, [dependency]);
 
   console.log(loggedIn)
   const login = (data) => {
     setLoggedIn(true);
     setUser(data.user);
-
+    setDepen(dependency+1);
     createCookie("access-token", data.jwt, 1);
   };
 
@@ -62,19 +73,8 @@ const AuthProvider = ({ children }) => {
     user,
     loggedIn,
   };
-//   if (loading) {
-//     return (
-//       <Flex justifyContent="center" alignItems="center" height="100vh">
-//         <Spinner
-//           thickness="4px"
-//           speed="0.65s"
-//           emptyColor="gray.200"
-//           size="xl"
-//           color="red.500"
-//         />
-//       </Flex>
-//     );
-//   }
+
+  
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
 };
 

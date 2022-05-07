@@ -60,7 +60,7 @@ function RecievedOffers({recievedOffers}) {
         </div>
         <div className={AccountBidCardStyle.ButtonGroup}>
         
-                {recievedOffers.isStatus == true &&  <span className={AccountBidCardStyle.Accepted}>Onaylandı</span>} 
+                {recievedOffers.isStatus == true &&  <span className={AccountBidCardStyle.YourAccept}>Onaylandı</span>} 
                 {recievedOffers.isStatus == false && <span className={AccountBidCardStyle.Rejected}>Reddedildi</span> }
                 {
                     recievedOffers.isStatus == null && <>

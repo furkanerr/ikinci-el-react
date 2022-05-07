@@ -96,7 +96,7 @@ export default class Service {
       const response = await axios.post("https://bootcamp.akbolat.net/auth/local/register",input);
       return response;
     } catch (error) {
-      console.log(error);
+      return error.response;
     }
   }
 

@@ -17,7 +17,10 @@ import api from '../../services/api';
 import {useAuth} from '../../context/authContext';
 
 
+import {toast,ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+toast.configure()  
 
 function SignUp() {
   const {login} = useAuth();
@@ -32,13 +35,39 @@ function SignUp() {
         onSubmit: async (values) => {
           try {
           const response = await  api.Register({
-              username: values.password,
+              username: values.email,
               email: values.email,
               password: values.password,
             });
-            
+            if( response.status!==200){
+              const notify = () => {
+               
+                  toast.error(response.data.message[0].messages[0].message,
+                 {
+                     style:{backgroundColor:' #FFE5E5',color:'#F77474'},
+                  
+                  autoClose: 3000,
+                  draggable: false,
+                  newestOnTop: true,
+                  position: "top-right",
+                  closeButton: false,
+                  progressBar: false,
+                  pauseOnHover: false,
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  theme: "colored"
+                 }
+                      );
+              }
+              notify();
+          }
+          else{
             login(response.data);
             console.log(response)
+            navigate('/');
+          }
+            
+            
           } 
           catch (error) {
             console.log(error);
