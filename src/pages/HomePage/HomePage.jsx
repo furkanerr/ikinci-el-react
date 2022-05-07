@@ -19,6 +19,7 @@ function HomePage() {
   const [products,setProducts] = useState([])
   const [limit,setLimit] = useState(10)
   const [offset,setOffset] = useState(0)
+  
   const {category} = useParams();
 
 
