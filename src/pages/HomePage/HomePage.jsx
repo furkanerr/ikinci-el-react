@@ -39,6 +39,7 @@ function HomePage() {
   useEffect(() => { 
      const fetchData = async () => {
        if(category){
+        setProducts([])
         const response = await api.GetProductByCategory(category);
         setProducts(response[0].products);
        }
