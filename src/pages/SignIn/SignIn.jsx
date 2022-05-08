@@ -110,7 +110,7 @@ function SignIn() {
             <form onSubmit={formik.handleSubmit}>
                 <div className={SignInStyle.FormElements}>
                     <div className={SignInStyle.Email}>
-                        <label className={SignInStyle.Label} htmlFor="email">Email</label>
+                        <label className={SignInStyle.Label} for="email">Email</label>
                         <input className={SignInStyle.Input} type="email"
                         onChange={formik.handleChange}
                         value={formik.values.email}

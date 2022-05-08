@@ -21,7 +21,7 @@ function Navbar() {
       <div className={NavbarStyle.Container}>
         <div className={NavbarStyle.Logo}>
           <Link to="/">
-            <img className={NavbarStyle.LogoImg} src={Logo} />
+            <img className={NavbarStyle.LogoImg} src={Logo} alt='logo' />
           </Link>
         </div>
         <div className={NavbarStyle.ButtonGroup}>
