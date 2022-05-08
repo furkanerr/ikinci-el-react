@@ -29,7 +29,7 @@ function HomePage() {
      // setLimit(limit+10)
     
      setOffset(offset+10)
-      window.scrollBy(0, 100);
+      
   
     }
   }
