@@ -1,6 +1,6 @@
 # Live: https://patika-ciceksepeti-furkaner.netlify.app/
  
-
+ This project is built with React.js for graduation of Protein React Bootcamp. 
 
 Proje bir e-ticaret sitesi projesidir. Üyeler satıştaki ürünlere teklif verebilir veya doğrudan ürünü satın alabilir. Verilen teklifler Hesabım menüsü altında listelenir.
 
