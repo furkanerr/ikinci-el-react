@@ -45,11 +45,15 @@ function HomePage() {
        }
        else{
         const response = await api.GetAllProducts(limit,offset);
-        if(response.length > 0){
+        if(response?.status !== 200){  
+          alert('Network Erro. Back end çalışmıyor. ')
+        }
+        if(response?.length > 0){
         setProducts(prev => [...prev,...response]);
         
       
         }
+
         console.log(response)
        }
      
