@@ -1,4 +1,4 @@
-# Live: https://patika-ciceksepeti-furkaner.netlify.app/
+# Live: https://2nd-hand-furkaner.netlify.app/
  
  This project is built with React.js for graduation of Protein React Bootcamp. 
 
