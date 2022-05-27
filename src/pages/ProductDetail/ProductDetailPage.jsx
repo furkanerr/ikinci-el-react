@@ -1,6 +1,7 @@
 /**Depenedencies */
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Draggable from "react-draggable";
 
 /**Style */
 import ProductDetailStyle from "../../styles/ProductDetailPageStyle/ProductDetailPageStyle.module.css";
@@ -39,10 +40,6 @@ function ProductDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  //  const { isError, isLoading, data } = useQuery(["product", id], () =>
-  //    api.GetProductById(id)
-
-  //  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,9 +51,7 @@ function ProductDetailPage() {
 
   console.log(data);
 
-  //  if (isLoading) return "Loading...";
 
-  // if (isError) return "An error has occurred: " + isError.message;
 
   const handleDelete = async (id) => {
     const response = await api.DeleteProduct(id);
@@ -208,6 +203,7 @@ function ProductDetailPage() {
               </div>
             ) : null}
             <div className={ProductDetailStyle.Info}>{data?.description}</div>
+            <Draggable axis='y' >
             <div className={ProductDetailStyle.ButtonGroup}>
               {user?.data?.id == data?.users_permissions_user?.id ? (
                 <div
@@ -248,6 +244,7 @@ function ProductDetailPage() {
                 </div>
               )}
             </div>
+            </Draggable>
           </div>
         </div>
       </div>

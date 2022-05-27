@@ -135,7 +135,7 @@ color: #525252;
 .ButtonGroup{
  
     display: flex;
-gap:1rem;
+    gap:1rem;
     flex-direction: row;
     width: min-content;
     
@@ -358,7 +358,7 @@ color: #525252;
     background-color: #ffffff;
   }
   .BuyButton {
-    width: 172px;
+    width: 134px;
     height: 45px;
     text-align: center;
     font: normal normal bold 18px/24px Nunito;
@@ -371,7 +371,7 @@ color: #525252;
     border-radius: 8px;
   }
   .BidButton {
-    width: 172px;
+    width: 134px;
     height: 45px;
     text-align: center;
     font: normal normal bold 18px/24px Nunito;
