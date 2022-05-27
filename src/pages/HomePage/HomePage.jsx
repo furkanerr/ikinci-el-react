@@ -38,16 +38,14 @@ function HomePage() {
 
   useEffect(() => { 
      const fetchData = async () => {
-       if(category){
+       if(category  && category !== 'Hepsi'){
         setProducts([])
         const response = await api.GetProductByCategory(category);
         setProducts(response[0].products);
        }
        else{
         const response = await api.GetAllProducts(limit,offset);
-        if(response?.status !== 200){  
-          alert('Network Erro. Back end çalışmıyor. ')
-        }
+        
         if(response?.length > 0){
         setProducts(prev => [...prev,...response]);
         

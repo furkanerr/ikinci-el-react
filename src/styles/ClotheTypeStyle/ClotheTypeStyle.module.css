@@ -14,7 +14,6 @@
 }
 
 
-
 .ClotheTypeName{
     text-align: center;
 font: normal normal 600 18px/24px Nunito;
@@ -23,7 +22,7 @@ color: #525252;
 
 display: flex;
 border-bottom: 1px solid #E0E0E0;
-width: 0.05%;
+
 position: relative;
 margin-top: 30px;
     top: 1px;
