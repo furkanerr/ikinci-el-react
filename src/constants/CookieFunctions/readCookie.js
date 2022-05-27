@@ -1,8 +1,10 @@
 const readCookie = (name) => {
     var nameEQ = name + "=";
     var ca = document.cookie.split(";");
-      
-        return ca.substring(nameEQ.length, ca.length);
+      var c = ca[0];
+      console.log(c);
+      if(c){return c.substring(nameEQ.length, c.length);}
+      return null;
   };
   export default readCookie;
 
