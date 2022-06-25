@@ -28,7 +28,7 @@ export default class Service {
 
   static async GetAllProducts(limit,offset) {
     try {
-      const response = await axios.get(`https://bootcamp.akbolat.net/products?_limit=${limit}&_start=${offset}`);
+      const response = await axios.get(`https://bootcamp.akbolat.net/products`);
       return response.data;
     } catch (error) {
       console.log(error);
